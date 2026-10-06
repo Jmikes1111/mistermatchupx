@@ -1,0 +1,659 @@
+{
+  "modelVersion": "2.0.0",
+  "season": 2026,
+  "generatedAt": "2026-10-06T23:19:41.231Z",
+  "sourceSnapshot": "2026-10-06T23:18:47.748574Z",
+  "mode": "Retrospective walk-forward; corrected datasets are not archived pre-game vintages. No final-game QB IDs, market odds, or current depth charts used.",
+  "games": 63,
+  "decisiveGames": 63,
+  "accuracy": 0.6190476190476191,
+  "brier": 0.23505578365079366,
+  "logLoss": 0.6607779415492004,
+  "calibration": [
+    {
+      "lower": 0,
+      "upper": 0.1,
+      "count": 0,
+      "meanProbability": null,
+      "observedRate": null
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "count": 0,
+      "meanProbability": null,
+      "observedRate": null
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "count": 3,
+      "meanProbability": 0.2548333333333333,
+      "observedRate": 0.6666666666666666
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "count": 4,
+      "meanProbability": 0.3857,
+      "observedRate": 0.25
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 10,
+      "meanProbability": 0.45296000000000003,
+      "observedRate": 0.4
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 26,
+      "meanProbability": 0.5462269230769231,
+      "observedRate": 0.6153846153846154
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 10,
+      "meanProbability": 0.64488,
+      "observedRate": 0.4
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 8,
+      "meanProbability": 0.7484125,
+      "observedRate": 0.875
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 2,
+      "meanProbability": 0.8135,
+      "observedRate": 1
+    },
+    {
+      "lower": 0.9,
+      "upper": 1,
+      "count": 0,
+      "meanProbability": null,
+      "observedRate": null
+    }
+  ],
+  "ats": {
+    "wins": 0,
+    "losses": 0,
+    "pushes": 0,
+    "accuracy": null
+  },
+  "predictions": [
+    {
+      "gameId": "2026_01_NE_SEA",
+      "cutoff": "2026-09-09T00:00:00Z",
+      "probability": 0.5586,
+      "outcome": 1,
+      "predictedMargin": 1.930213983268164,
+      "actualMargin": 3,
+      "featureGames": 272
+    },
+    {
+      "gameId": "2026_01_SF_LA",
+      "cutoff": "2026-09-10T00:00:00Z",
+      "probability": 0.5675,
+      "outcome": 0,
+      "predictedMargin": 2.35875958636192,
+      "actualMargin": -20,
+      "featureGames": 272
+    },
+    {
+      "gameId": "2026_01_CHI_CAR",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.4972,
+      "outcome": 0,
+      "predictedMargin": -0.31148288300498805,
+      "actualMargin": -22,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_TB_CIN",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5188,
+      "outcome": 1,
+      "predictedMargin": 0.7498107245060481,
+      "actualMargin": 6,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_NO_DET",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.613,
+      "outcome": 1,
+      "predictedMargin": 4.044094213083021,
+      "actualMargin": 1,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5383,
+      "outcome": 0,
+      "predictedMargin": 1.6737150821968356,
+      "actualMargin": -5,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5646,
+      "outcome": 0,
+      "predictedMargin": 2.457097615405054,
+      "actualMargin": -18,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.6665,
+      "outcome": 1,
+      "predictedMargin": 5.999563976536109,
+      "actualMargin": 24,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.575,
+      "outcome": 1,
+      "predictedMargin": 2.5918907909501527,
+      "actualMargin": 7,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5457,
+      "outcome": 0,
+      "predictedMargin": 1.8737015287473007,
+      "actualMargin": -13,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.6388,
+      "outcome": 0,
+      "predictedMargin": 4.726205377558234,
+      "actualMargin": -12,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_MIA_LV",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.4978,
+      "outcome": 1,
+      "predictedMargin": -0.25015826712412803,
+      "actualMargin": 14,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_GB_MIN",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5228,
+      "outcome": 1,
+      "predictedMargin": 0.9080062057582516,
+      "actualMargin": 17,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_WAS_PHI",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.6326,
+      "outcome": 1,
+      "predictedMargin": 4.755151476610802,
+      "actualMargin": 2,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_DAL_NYG",
+      "cutoff": "2026-09-13T00:00:00Z",
+      "probability": 0.5434,
+      "outcome": 1,
+      "predictedMargin": 1.4297414992007766,
+      "actualMargin": 8,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_01_DEN_KC",
+      "cutoff": "2026-09-14T00:00:00Z",
+      "probability": 0.5132,
+      "outcome": 1,
+      "predictedMargin": 0.7457192758023048,
+      "actualMargin": 21,
+      "featureGames": 274
+    },
+    {
+      "gameId": "2026_02_DET_BUF",
+      "cutoff": "2026-09-17T00:00:00Z",
+      "probability": 0.5993,
+      "outcome": 1,
+      "predictedMargin": 3.3004342839647265,
+      "actualMargin": 10,
+      "featureGames": 288
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.614,
+      "outcome": 0,
+      "predictedMargin": 4.430241486355072,
+      "actualMargin": -31,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_NO_BAL",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.7081,
+      "outcome": 0,
+      "predictedMargin": 7.844323582381104,
+      "actualMargin": -7,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_MIN_CHI",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.5697,
+      "outcome": 0,
+      "predictedMargin": 2.5855721807200958,
+      "actualMargin": -6,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_CIN_HOU",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.5486,
+      "outcome": 0,
+      "predictedMargin": 1.3970929432150179,
+      "actualMargin": -14,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_PIT_NE",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.5574,
+      "outcome": 1,
+      "predictedMargin": 2.2552628055507533,
+      "actualMargin": 17,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_GB_NYJ",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.6427,
+      "outcome": 0,
+      "predictedMargin": 5.361680646713172,
+      "actualMargin": -3,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_CLE_TB",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.6738,
+      "outcome": 0,
+      "predictedMargin": 6.325863918650917,
+      "actualMargin": -4,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_PHI_TEN",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.365,
+      "outcome": 0,
+      "predictedMargin": -4.642537365263088,
+      "actualMargin": -4,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.2481,
+      "outcome": 1,
+      "predictedMargin": -9.288945488741884,
+      "actualMargin": 7,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_LV_LAC",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.453,
+      "outcome": 0,
+      "predictedMargin": -1.675221715879779,
+      "actualMargin": -12,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_SEA_ARI",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.5052,
+      "outcome": 0,
+      "predictedMargin": 0.1192152711433998,
+      "actualMargin": -24,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_WAS_DAL",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.5142,
+      "outcome": 1,
+      "predictedMargin": 0.627068816211775,
+      "actualMargin": 17,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_MIA_SF",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.7863,
+      "outcome": 1,
+      "predictedMargin": 11.20746373060631,
+      "actualMargin": 22,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_IND_KC",
+      "cutoff": "2026-09-20T00:00:00Z",
+      "probability": 0.7922,
+      "outcome": 1,
+      "predictedMargin": 11.10959008346541,
+      "actualMargin": 3,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_02_NYG_LA",
+      "cutoff": "2026-09-21T00:00:00Z",
+      "probability": 0.4471,
+      "outcome": 1,
+      "predictedMargin": -1.894930059803123,
+      "actualMargin": 22,
+      "featureGames": 289
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "cutoff": "2026-09-24T00:00:00Z",
+      "probability": 0.693,
+      "outcome": 0,
+      "predictedMargin": 7.306679359923219,
+      "actualMargin": -21,
+      "featureGames": 304
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.7417,
+      "outcome": 1,
+      "predictedMargin": 9.584765613342654,
+      "actualMargin": 8,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.3997,
+      "outcome": 1,
+      "predictedMargin": -3.4817029339803405,
+      "actualMargin": 3,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.5344,
+      "outcome": 1,
+      "predictedMargin": 1.1265819875336867,
+      "actualMargin": 7,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.5134,
+      "outcome": 1,
+      "predictedMargin": 0.14066095047398974,
+      "actualMargin": 2,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.5435,
+      "outcome": 1,
+      "predictedMargin": 1.5231283403318407,
+      "actualMargin": 29,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.2537,
+      "outcome": 0,
+      "predictedMargin": -9.336827297308261,
+      "actualMargin": -14,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.5892,
+      "outcome": 1,
+      "predictedMargin": 3.174326387148227,
+      "actualMargin": 5,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.4319,
+      "outcome": 1,
+      "predictedMargin": -2.415732414311563,
+      "actualMargin": 3,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.2627,
+      "outcome": 1,
+      "predictedMargin": -9.212922556546538,
+      "actualMargin": 2,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.8116,
+      "outcome": 1,
+      "predictedMargin": 12.42311258662438,
+      "actualMargin": 6,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.3807,
+      "outcome": 0,
+      "predictedMargin": -4.135580132969988,
+      "actualMargin": -7,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.4224,
+      "outcome": 0,
+      "predictedMargin": -2.4527567768120058,
+      "actualMargin": -3,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.5002,
+      "outcome": 0,
+      "predictedMargin": -0.13098752090244759,
+      "actualMargin": -8,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "cutoff": "2026-09-27T00:00:00Z",
+      "probability": 0.4228,
+      "outcome": 1,
+      "predictedMargin": -2.4815873521689795,
+      "actualMargin": 4,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "cutoff": "2026-09-28T00:00:00Z",
+      "probability": 0.6087,
+      "outcome": 1,
+      "predictedMargin": 3.8364900099746215,
+      "actualMargin": 20,
+      "featureGames": 305
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "cutoff": "2026-10-01T00:00:00Z",
+      "probability": 0.5302,
+      "outcome": 1,
+      "predictedMargin": 1.0172179342518746,
+      "actualMargin": 3,
+      "featureGames": 320
+    },
+    {
+      "gameId": "2026_04_IND_WAS",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.4835,
+      "outcome": 0,
+      "predictedMargin": -0.3559680968417851,
+      "actualMargin": -17,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_TEN_BAL",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.7381,
+      "outcome": 1,
+      "predictedMargin": 8.889315293202436,
+      "actualMargin": 6,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_NE_BUF",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.6657,
+      "outcome": 0,
+      "predictedMargin": 5.925129209075042,
+      "actualMargin": -3,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_NYJ_CHI",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.702,
+      "outcome": 1,
+      "predictedMargin": 7.469761823646586,
+      "actualMargin": 11,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_JAX_CIN",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.3974,
+      "outcome": 0,
+      "predictedMargin": -3.9199901786965548,
+      "actualMargin": -5,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_DAL_HOU",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.5016,
+      "outcome": 0,
+      "predictedMargin": 0.23256748474874556,
+      "actualMargin": -4,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_ARI_NYG",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.5927,
+      "outcome": 1,
+      "predictedMargin": 3.2859703667356897,
+      "actualMargin": 12,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_LA_PHI",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.422,
+      "outcome": 0,
+      "predictedMargin": -2.544866130609183,
+      "actualMargin": -4,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_GB_TB",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.597,
+      "outcome": 0,
+      "predictedMargin": 3.4116066165707224,
+      "actualMargin": -3,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_MIA_MIN",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.8154,
+      "outcome": 1,
+      "predictedMargin": 12.696238146640509,
+      "actualMargin": 5,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_KC_LV",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.4519,
+      "outcome": 0,
+      "predictedMargin": -1.2851860672884428,
+      "actualMargin": -3,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_LAC_SEA",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.7758,
+      "outcome": 1,
+      "predictedMargin": 10.199619964418288,
+      "actualMargin": 7,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_DEN_SF",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.7431,
+      "outcome": 1,
+      "predictedMargin": 9.332888358073362,
+      "actualMargin": 10,
+      "featureGames": 321
+    },
+    {
+      "gameId": "2026_04_DET_CAR",
+      "cutoff": "2026-10-04T00:00:00Z",
+      "probability": 0.5574,
+      "outcome": 1,
+      "predictedMargin": 1.797464628601734,
+      "actualMargin": 6,
+      "featureGames": 321
+    }
+  ]
+}

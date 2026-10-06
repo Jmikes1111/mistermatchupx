@@ -1,0 +1,1 @@
+{"name":"mistermatchup","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","backtest":"node scripts/backtest.js","data":"python3 scripts/build_data.py","serve":"python3 -m http.server 8000 --bind 127.0.0.1"}}
