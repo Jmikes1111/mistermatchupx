@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import zlib from 'node:zlib';
+import {validateHistory,buildModel} from '../../js/nhl/model.js';
+const root=new URL('../../',import.meta.url),history=validateHistory(JSON.parse(zlib.gunzipSync(fs.readFileSync(new URL('data/nhl/history.json.gz',root)))));
+const drawPath=new URL('data/nhl/draw-decision.json',root);
+const decision=fs.existsSync(drawPath)?JSON.parse(fs.readFileSync(drawPath)):null;
+const config=decision?{...decision.frozenTeamStrength,regulation:decision.regulation,overtimeMode:decision.overtimeMode}:JSON.parse(fs.readFileSync(new URL('data/nhl/config.json',root)));
+if(decision)fs.writeFileSync(new URL('data/nhl/config.json',root),JSON.stringify(config,null,2)+'\n');
+const model=buildModel(history,{config});
+const metadata={...history.metadata,modelVersion:decision?.modelVersion??'1.0.1-audited-experimental',probabilityMethod:'Analytical probabilities; 10,000 Monte Carlo diagnostic trials',modelBuiltAt:new Date().toISOString(),selectedConfig:config,availability:{unconfirmedStarters:true,injuries:false,travel:false,lineups:false}};
+fs.writeFileSync(new URL('data/nhl/snapshot.json',root),JSON.stringify({metadata,model},null,0)+'\n');
+const provenance=JSON.parse(fs.readFileSync(new URL('data/nhl/provenance.json',root)));provenance.metadata=metadata;fs.writeFileSync(new URL('data/nhl/provenance.json',root),JSON.stringify(provenance,null,0)+'\n');
+console.log(`NHL snapshot built: ${Object.keys(model.teams).length} teams, data through ${metadata.dataThrough}`);

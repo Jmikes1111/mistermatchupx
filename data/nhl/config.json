@@ -1,0 +1,18 @@
+{
+  "recency": "blended",
+  "distribution": "poisson",
+  "dispersion": 96.24052741370934,
+  "homeFactor": 1.0358499097081455,
+  "regressionGames": 10,
+  "shootoutShare": 0.3014705882352941,
+  "goalieRecentWeight": 0,
+  "finishingWeight": 0,
+  "regulation": {
+    "family": "draw-logit",
+    "coefficients": [
+      0.3202413615129365
+    ],
+    "ridge": 5
+  },
+  "overtimeMode": "rate"
+}

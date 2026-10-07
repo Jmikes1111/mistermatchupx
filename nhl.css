@@ -1,0 +1,9 @@
+.sport {text-decoration:none;}
+.goalie-options {display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;}
+#dataInfo {font-weight:800;color:var(--green);}
+#formTables {overflow-x:auto;}
+table {border-collapse:collapse;width:100%;font-size:12px;margin:14px 0;}
+th,td {padding:8px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;}
+th:first-child,td:first-child {text-align:left;}
+#goalieImpact {margin-top:12px;}
+@media(max-width:650px){.goalie-options{grid-template-columns:1fr;}}

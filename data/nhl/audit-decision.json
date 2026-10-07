@@ -1,0 +1,177 @@
+{
+  "selectedConfig": {
+    "recency": "blended",
+    "distribution": "poisson",
+    "dispersion": 96.24052741370934,
+    "homeFactor": 1.0358499097081455,
+    "regressionGames": 10,
+    "shootoutShare": 0.3014705882352941,
+    "goalieRecentWeight": 0,
+    "finishingWeight": 0
+  },
+  "adopt": true,
+  "selectedIndex": 3,
+  "componentSelection": "Lowest early-validation log loss among four predeclared variants; require late-validation improvement >0.001 log loss AND >0.0005 Brier.",
+  "calibration": {
+    "method": "Symmetric logit temperature, intercept fixed zero to preserve neutral-team exchange symmetry",
+    "slope": 0.975,
+    "lateRaw": {
+      "games": 438,
+      "accuracy": 0.6164383561643836,
+      "brier": 0.2267940494749279,
+      "logLoss": 0.6450398973230987,
+      "calibration": [
+        {
+          "lower": 0,
+          "upper": 0.1,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 7,
+          "meanProbability": 0.2697838965547602,
+          "observedRate": 0.2857142857142857
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 42,
+          "meanProbability": 0.3700284636448986,
+          "observedRate": 0.3333333333333333
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 108,
+          "meanProbability": 0.46239005261926236,
+          "observedRate": 0.5370370370370371
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 140,
+          "meanProbability": 0.5513989952422498,
+          "observedRate": 0.5785714285714286
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 116,
+          "meanProbability": 0.6434809687675643,
+          "observedRate": 0.7327586206896551
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 23,
+          "meanProbability": 0.7266828369719314,
+          "observedRate": 0.8260869565217391
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 2,
+          "meanProbability": 0.8117316526307239,
+          "observedRate": 1
+        },
+        {
+          "lower": 0.9,
+          "upper": 1,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        }
+      ]
+    },
+    "lateCalibrated": {
+      "games": 438,
+      "accuracy": 0.6164383561643836,
+      "brier": 0.22703228173385356,
+      "logLoss": 0.6455941508958244,
+      "calibration": [
+        {
+          "lower": 0,
+          "upper": 0.1,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 5,
+          "meanProbability": 0.2640462802543454,
+          "observedRate": 0.2
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 39,
+          "meanProbability": 0.3658407181473629,
+          "observedRate": 0.38461538461538464
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 113,
+          "meanProbability": 0.4605699754492795,
+          "observedRate": 0.5132743362831859
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 142,
+          "meanProbability": 0.5508002926687617,
+          "observedRate": 0.5774647887323944
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 115,
+          "meanProbability": 0.6413415182616351,
+          "observedRate": 0.7391304347826086
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 23,
+          "meanProbability": 0.7262346325396278,
+          "observedRate": 0.8260869565217391
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 1,
+          "meanProbability": 0.8136361072723645,
+          "observedRate": 1
+        },
+        {
+          "lower": 0.9,
+          "upper": 1,
+          "n": 0,
+          "meanProbability": null,
+          "observedRate": null
+        }
+      ]
+    },
+    "adopt": false
+  },
+  "frozenAt": "2026-10-07T00:04:38.019Z"
+}
