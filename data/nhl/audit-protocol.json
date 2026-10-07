@@ -1,0 +1,33 @@
+{
+  "originalConfig": {
+    "recency": "blended",
+    "distribution": "poisson",
+    "dispersion": 96.24052741370934,
+    "homeFactor": 1.0358499097081455,
+    "regressionGames": 10,
+    "shootoutShare": 0.3014705882352941
+  },
+  "validationSeason": 2024,
+  "previouslyReportedHoldoutSeason": 2025,
+  "reservedSmallSampleSeason": 2026,
+  "noHoldoutTuning": true,
+  "componentCandidates": [
+    {
+      "goalieRecentWeight": 0.3,
+      "finishingWeight": 1
+    },
+    {
+      "goalieRecentWeight": 0,
+      "finishingWeight": 1
+    },
+    {
+      "goalieRecentWeight": 0.3,
+      "finishingWeight": 0
+    },
+    {
+      "goalieRecentWeight": 0,
+      "finishingWeight": 0
+    }
+  ],
+  "selection": "Lowest early-validation log loss; require late-validation gains >0.001 log loss and >0.0005 Brier. Calibration: symmetric temperature, no neutral-team intercept."
+}

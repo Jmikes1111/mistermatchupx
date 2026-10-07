@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:,">
-<title>MisterMatchup — Settle the Debate</title>
+<title>MisterMatchup NHL — Settle the Debate</title>
 
 <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./nhl.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 <header>
   <div class="container nav">
     <div class="logo">MISTER<span>MATCHUP</span></div>
-    <div class="badge">NFL V2 BETA</div>
+    <div class="badge">NHL V1.1 PROTOTYPE</div>
   </div>
 </header>
 
@@ -28,10 +29,10 @@
     </p>
 
     <div class="sports">
-      <div class="sport active">NFL</div>
+      <a class="sport" href="./index.html">NFL</a>
       <div class="sport">NBA — SOON</div>
       <div class="sport">MLB — SOON</div>
-      <a class="sport" href="./nhl.html">NHL — PROTOTYPE</a>
+      <div class="sport active">NHL</div>
     </div>
   </section>
 
@@ -56,22 +57,28 @@
     <div class="options">
       <label class="home-toggle">
         <input type="checkbox" id="homeTeam" checked>
-        Team 1 has home-field advantage
+        Team 1 has home-ice advantage
       </label>
     </div>
 
+    <div class="goalie-options">
+      <div class="field"><label for="goalie1">Team 1 goalie scenario</label><select id="goalie1"></select></div>
+      <div class="field"><label for="goalie2">Team 2 goalie scenario</label><select id="goalie2"></select></div>
+    </div>
+    <p class="data-note">Goalie selections are hypothetical scenarios from observed workload, never starter confirmations. Rest/back-to-back context is unavailable for arbitrary pairings.</p>
     <button class="run" id="runButton" disabled>
       RUN 10,000 SIMULATIONS
     </button>
 
     <div class="status" id="status" role="status" aria-live="polite">
-      Initializing simulation engine...
+      Loading experimental NHL model...
     </div>
 
     <div class="data-note" id="dataInfo">Loading verified data snapshot…</div>
     <details class="data-note"><summary>Source retrieval and model build details</summary><div id="dataDetails"></div></details>
-    <div class="data-note"><a href="./data/provenance.json">Data sources</a> · Experimental model; probabilities are not calibrated betting advice. Unchecked home advantage means neutral field.</div>
+    <div class="data-note"><a href="./data/nhl/provenance.json">Data sources</a> · <a href="https://moneypuck.com/data.htm">MoneyPuck</a> data · Non-commercial experimental prototype. Commercial use requires appropriate licensing. Unchecked home ice means neutral venue. No confirmed goalie, injury or lineup feed.</div>
 
+    <details class="data-note"><summary>Recent process vs results</summary><div id="formTables"></div></details>
     <div class="results" id="results">
 
       <div class="pick">
@@ -80,6 +87,7 @@
         <div class="pick-sub" id="confidence"></div>
       </div>
 
+      <h3 class="data-note">FULL GAME WIN %</h3>
       <div class="probabilities">
 
         <div class="prob">
@@ -96,6 +104,7 @@
 
       </div>
 
+      <div class="why"><h3>REGULATION WIN % / TIED AFTER REGULATION (OT) %</h3><p id="regulation"></p><p id="goalieImpact"></p></div>
       <div class="why">
         <h3>WHY?</h3>
         <p id="whyText"></p>
@@ -116,7 +125,7 @@
   MISTERMATCHUP — SETTLE THE DEBATE.
 </footer>
 
-<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/nhl/app.js"></script>
 
 </body>
 </html>

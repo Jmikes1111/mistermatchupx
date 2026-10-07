@@ -1,0 +1,3089 @@
+{
+  "modelVersion": "1.1.0-experimental",
+  "decision": {
+    "modelVersion": "1.1.0-experimental",
+    "frozenAt": "2026-10-07T02:14:41.557Z",
+    "frozenTeamStrength": {
+      "recency": "blended",
+      "distribution": "poisson",
+      "dispersion": 96.24052741370934,
+      "homeFactor": 1.0358499097081455,
+      "regressionGames": 10,
+      "shootoutShare": 0.3014705882352941,
+      "goalieRecentWeight": 0,
+      "finishingWeight": 0
+    },
+    "regulation": {
+      "family": "draw-logit",
+      "coefficients": [
+        0.3202413615129365
+      ],
+      "ridge": 5
+    },
+    "overtimeMode": "rate",
+    "selectedFamily": "draw-logit-intercept",
+    "selectionRule": "Fit score parameters on 2023 training joint-score likelihood (draw-logit fits binary draw likelihood with offset and ridge 5). Select on 2024 validation draw log loss subject to winner-log-loss degradation <=0.005 and joint-score-log-loss degradation <=0.01 versus Poisson. OT rate advantage requires validation gains >0.001 log loss AND >0.0005 Brier; otherwise neutral.",
+    "holdoutPolicy": "Evaluate selected candidate on 2025 exactly once after this decision. Never tune from that outcome.",
+    "overtimeEvidence": {
+      "training": {
+        "rate": {
+          "games": 272,
+          "accuracy": 0.5220588235294118,
+          "brier": 0.2483967476852929,
+          "logLoss": 0.6899315512455736,
+          "calibration": [
+            {
+              "lower": 0,
+              "upper": 0.1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 96,
+              "meanProbability": 0.4779284857193104,
+              "observedRate": 0.5416666666666666
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 171,
+              "meanProbability": 0.529575877013506,
+              "observedRate": 0.5555555555555556
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 5,
+              "meanProbability": 0.6045311223343444,
+              "observedRate": 0.6
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            }
+          ]
+        },
+        "neutral": {
+          "games": 272,
+          "accuracy": 0.5514705882352942,
+          "brier": 0.25,
+          "logLoss": 0.6931471805599466,
+          "calibration": [
+            {
+              "lower": 0,
+              "upper": 0.1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 272,
+              "meanProbability": 0.5,
+              "observedRate": 0.5514705882352942
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            }
+          ]
+        }
+      },
+      "validation": {
+        "rate": {
+          "games": 271,
+          "accuracy": 0.5313653136531366,
+          "brier": 0.24360496702079096,
+          "logLoss": 0.680258209311632,
+          "calibration": [
+            {
+              "lower": 0,
+              "upper": 0.1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 1,
+              "meanProbability": 0.39490225693923436,
+              "observedRate": 0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 89,
+              "meanProbability": 0.47467917562772877,
+              "observedRate": 0.5168539325842697
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 178,
+              "meanProbability": 0.5353435624971069,
+              "observedRate": 0.5449438202247191
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 3,
+              "meanProbability": 0.6090091708874817,
+              "observedRate": 1
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            }
+          ]
+        },
+        "neutral": {
+          "games": 271,
+          "accuracy": 0.5387453874538746,
+          "brier": 0.25,
+          "logLoss": 0.6931471805599466,
+          "calibration": [
+            {
+              "lower": 0,
+              "upper": 0.1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 271,
+              "meanProbability": 0.5,
+              "observedRate": 0.5387453874538746
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1,
+              "n": 0,
+              "meanProbability": null,
+              "observedRate": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "candidates": [
+    {
+      "name": "independent-poisson",
+      "spec": {
+        "family": "poisson"
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.1596050217201308,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16651836290347727,
+        "drawLogLoss": 0.5180190239297212,
+        "winnerBrier": 0.23893204804227158,
+        "winnerLogLoss": 0.6703265822968134,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.8759294331230723,
+        "maxOmittedTail": 2.886579864025407e-15
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.16034221778130991,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.1662486815852797,
+        "drawLogLoss": 0.5176859476305791,
+        "winnerBrier": 0.2339094022793574,
+        "winnerLogLoss": 0.6598104310313161,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.864637388381133,
+        "maxOmittedTail": 2.6645352591003757e-15
+      }
+    },
+    {
+      "name": "bivariate-poisson",
+      "spec": {
+        "family": "bivariate-poisson",
+        "sharedFraction": 0
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.1596050217201308,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16651836290347727,
+        "drawLogLoss": 0.5180190239297212,
+        "winnerBrier": 0.23893204804227158,
+        "winnerLogLoss": 0.6703265822968134,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.8759294331230723,
+        "maxOmittedTail": 2.886579864025407e-15
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.16034221778130991,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.1662486815852797,
+        "drawLogLoss": 0.5176859476305791,
+        "winnerBrier": 0.2339094022793574,
+        "winnerLogLoss": 0.6598104310313161,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.864637388381133,
+        "maxOmittedTail": 2.6645352591003757e-15
+      }
+    },
+    {
+      "name": "dixon-coles",
+      "spec": {
+        "family": "dixon-coles",
+        "rho": -0.08
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.1628667177588614,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16621038872350688,
+        "drawLogLoss": 0.5168827957020408,
+        "winnerBrier": 0.23893305451078778,
+        "winnerLogLoss": 0.6703280719581278,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.875117345147356,
+        "maxOmittedTail": 2.886579864025407e-15
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.1638755733581772,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.1659631069055461,
+        "drawLogLoss": 0.5166150636830578,
+        "winnerBrier": 0.23390574203307307,
+        "winnerLogLoss": 0.6598008192815783,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.8620842252570777,
+        "maxOmittedTail": 2.55351295663786e-15
+      }
+    },
+    {
+      "name": "negative-binomial",
+      "spec": {
+        "family": "negative-binomial",
+        "dispersion": 200
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.15874949240683484,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16659862286586025,
+        "drawLogLoss": 0.518316086916481,
+        "winnerBrier": 0.238935279225104,
+        "winnerLogLoss": 0.6703376984124382,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.8759549263277466,
+        "maxOmittedTail": 4.6407322429331543e-14
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.15952962902668977,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.16632127381314163,
+        "drawLogLoss": 0.5179583702556213,
+        "winnerBrier": 0.23392937134831326,
+        "winnerLogLoss": 0.6598615652577482,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.864462630455547,
+        "maxOmittedTail": 4.618527782440651e-14
+      }
+    },
+    {
+      "name": "shared-gamma",
+      "spec": {
+        "family": "shared-gamma",
+        "shape": 200
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.15995381329812441,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16648490088787782,
+        "drawLogLoss": 0.5178937958107256,
+        "winnerBrier": 0.23893236932036124,
+        "winnerLogLoss": 0.6703276180000517,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.877215641005071,
+        "maxOmittedTail": 3.9190872769268026e-14
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.16069717260528094,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.16621621601094771,
+        "drawLogLoss": 0.5175626433248797,
+        "winnerBrier": 0.23391125611540792,
+        "winnerLogLoss": 0.6598152508567147,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.8653941666526204,
+        "maxOmittedTail": 3.452793606584237e-14
+      }
+    },
+    {
+      "name": "draw-logit-intercept",
+      "spec": {
+        "family": "draw-logit",
+        "coefficients": [
+          0.3202413615129365
+        ],
+        "ridge": 5
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.2073170731707319,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.16424661058246046,
+        "drawLogLoss": 0.5101212495791836,
+        "winnerBrier": 0.23894720453432658,
+        "winnerLogLoss": 0.6703795931331089,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.8680316587725287,
+        "maxOmittedTail": 2.886579864025407e-15
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.20821253194296171,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.16419689291167106,
+        "drawLogLoss": 0.5102935675833266,
+        "winnerBrier": 0.23401647309495727,
+        "winnerLogLoss": 0.6600806037395596,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.8572450083338863,
+        "maxOmittedTail": 2.6645352591003757e-15
+      }
+    },
+    {
+      "name": "draw-logit-inputs",
+      "spec": {
+        "family": "draw-logit",
+        "coefficients": [
+          0.34627278332792005,
+          0.05810123623779892,
+          -0.06788182607805854
+        ],
+        "ridge": 5
+      },
+      "training": {
+        "games": 1312,
+        "predictedTieRate": 0.20731707317073167,
+        "observedTieRate": 0.2073170731707317,
+        "drawBrier": 0.1642069946789195,
+        "drawLogLoss": 0.5099720243547743,
+        "winnerBrier": 0.23894881427361186,
+        "winnerLogLoss": 0.6703862164469654,
+        "winnerAccuracy": 0.5807926829268293,
+        "regulationScoreLogLoss": 3.867882433548121,
+        "maxOmittedTail": 2.886579864025407e-15
+      },
+      "validation": {
+        "games": 1312,
+        "predictedTieRate": 0.21031692462109472,
+        "observedTieRate": 0.20655487804878048,
+        "drawBrier": 0.16425507477337553,
+        "drawLogLoss": 0.5104245498226967,
+        "winnerBrier": 0.23404344315797804,
+        "winnerLogLoss": 0.6601489038023609,
+        "winnerAccuracy": 0.5922256097560976,
+        "regulationScoreLogLoss": 3.8573759905732445,
+        "maxOmittedTail": 2.6645352591003757e-15
+      }
+    }
+  ],
+  "trainingParameterFits": [
+    {
+      "name": "independent-poisson",
+      "models": [
+        {
+          "spec": {
+            "family": "poisson"
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1596050217201308,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16651836290347727,
+            "drawLogLoss": 0.5180190239297212,
+            "winnerBrier": 0.23893204804227158,
+            "winnerLogLoss": 0.6703265822968134,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8759294331230723,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        }
+      ]
+    },
+    {
+      "name": "bivariate-poisson",
+      "models": [
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1596050217201308,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16651836290347727,
+            "drawLogLoss": 0.5180190239297212,
+            "winnerBrier": 0.23893204804227158,
+            "winnerLogLoss": 0.6703265822968134,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8759294331230723,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0.1
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1675446828337962,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16583331747098126,
+            "drawLogLoss": 0.5155325173441453,
+            "winnerBrier": 0.238950872947062,
+            "winnerLogLoss": 0.6703457685847515,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8874364440716014,
+            "maxOmittedTail": 3.1086244689504383e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0.2
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.17685936226820115,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16519733777424866,
+            "drawLogLoss": 0.5133155920075213,
+            "winnerBrier": 0.23901723472313993,
+            "winnerLogLoss": 0.6704682367223046,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.9086825574927686,
+            "maxOmittedTail": 3.1086244689504383e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0.3
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1880215665495036,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1646760099246709,
+            "drawLogLoss": 0.511573196866429,
+            "winnerBrier": 0.23915296339058725,
+            "winnerLogLoss": 0.6707445916773166,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.9423186907954797,
+            "maxOmittedTail": 3.219646771412954e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0.4
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.20177933472269777,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16439913635664655,
+            "drawLogLoss": 0.5106753411446184,
+            "winnerBrier": 0.23939233034607152,
+            "winnerLogLoss": 0.6712559516347907,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.993107345326042,
+            "maxOmittedTail": 3.885780586188048e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "bivariate-poisson",
+            "sharedFraction": 0.5
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.2194018939592373,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16464393359306578,
+            "drawLogLoss": 0.5113464795856562,
+            "winnerBrier": 0.23979151467025409,
+            "winnerLogLoss": 0.6721384969593751,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 4.069259806428837,
+            "maxOmittedTail": 3.6637359812630166e-15
+          }
+        }
+      ]
+    },
+    {
+      "name": "dixon-coles",
+      "models": [
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": -0.08
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1628667177588614,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16621038872350688,
+            "drawLogLoss": 0.5168827957020408,
+            "winnerBrier": 0.23893305451078778,
+            "winnerLogLoss": 0.6703280719581278,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.875117345147356,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": -0.12
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1644975657782267,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.166065185130508,
+            "drawLogLoss": 0.5163533774411548,
+            "winnerBrier": 0.23893356901367444,
+            "winnerLogLoss": 0.6703288423154385,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.875303426489061,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": -0.04
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1612358697394963,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1663614479811631,
+            "drawLogLoss": 0.5174378452301491,
+            "winnerBrier": 0.23893254752032003,
+            "winnerLogLoss": 0.6703273186209876,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.875321566450859,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": -0.02
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1604204457298135,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16643917348423792,
+            "drawLogLoss": 0.5177251365793841,
+            "winnerBrier": 0.2389322968422435,
+            "winnerLogLoss": 0.6703269483327291,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.875570328836314,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": 0
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1596050217201308,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16651836290347727,
+            "drawLogLoss": 0.5180190239297212,
+            "winnerBrier": 0.23893204804227158,
+            "winnerLogLoss": 0.6703265822968134,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8759294331230723,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "dixon-coles",
+            "rho": 0.02
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.15878959771044823,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16659901623888032,
+            "drawLogLoss": 0.518319572512226,
+            "winnerBrier": 0.23893180112040474,
+            "winnerLogLoss": 0.6703262205123433,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8764233117915783,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        }
+      ]
+    },
+    {
+      "name": "negative-binomial",
+      "models": [
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 200
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.15874949240683484,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16659862286586025,
+            "drawLogLoss": 0.518316086916481,
+            "winnerBrier": 0.238935279225104,
+            "winnerLogLoss": 0.6703376984124382,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8759549263277466,
+            "maxOmittedTail": 4.6407322429331543e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 96.24052741370934
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1578527532890013,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16668439979031344,
+            "drawLogLoss": 0.5186350929267541,
+            "winnerBrier": 0.23893994552615686,
+            "winnerLogLoss": 0.670352213051787,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8762154295932234,
+            "maxOmittedTail": 2.220446049250313e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 50
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.15631711378024007,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16683520860002704,
+            "drawLogLoss": 0.5191997245735535,
+            "winnerBrier": 0.23895106151022683,
+            "winnerLogLoss": 0.6703840303842438,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8772282531809683,
+            "maxOmittedTail": 1.1546319456101628e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 20
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1519914277350839,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16728652929999976,
+            "drawLogLoss": 0.5209175821300234,
+            "winnerBrier": 0.23900495326466267,
+            "winnerLogLoss": 0.6705235054115707,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8841327287318563,
+            "maxOmittedTail": 7.105427357601002e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 10
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.14609224443215746,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16796475707729364,
+            "drawLogLoss": 0.5235760135421405,
+            "winnerBrier": 0.23913989462066634,
+            "winnerLogLoss": 0.6708474526233087,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.904517726301758,
+            "maxOmittedTail": 1.8784973576657649e-13
+          }
+        },
+        {
+          "spec": {
+            "family": "negative-binomial",
+            "dispersion": 5
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.13786264441242393,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16903079564628057,
+            "drawLogLoss": 0.527936022468865,
+            "winnerBrier": 0.23949200682111002,
+            "winnerLogLoss": 0.6716496576971468,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.96285931213237,
+            "maxOmittedTail": 7.630953646753369e-10
+          }
+        }
+      ]
+    },
+    {
+      "name": "shared-gamma",
+      "models": [
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 200
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.15995381329812441,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16648490088787782,
+            "drawLogLoss": 0.5178937958107256,
+            "winnerBrier": 0.23893236932036124,
+            "winnerLogLoss": 0.6703276180000517,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.877215641005071,
+            "maxOmittedTail": 3.9190872769268026e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 100
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1603052259667491,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16645143373324475,
+            "drawLogLoss": 0.5177687755713849,
+            "winnerBrier": 0.2389326979585785,
+            "winnerLogLoss": 0.6703286699867848,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.878837362701991,
+            "maxOmittedTail": 1.9984014443252818e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 50
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.16101611784466022,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1663844870463919,
+            "drawLogLoss": 0.5175193726997017,
+            "winnerBrier": 0.23893337714611093,
+            "winnerLogLoss": 0.6703308223597891,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.882929677786052,
+            "maxOmittedTail": 1.0103029524088925e-14
+          }
+        },
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 20
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.16321681701146026,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16618365390717432,
+            "drawLogLoss": 0.5167767040927004,
+            "winnerBrier": 0.23893558679327667,
+            "winnerLogLoss": 0.6703376582395455,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.899963609243184,
+            "maxOmittedTail": 7.327471962526033e-15
+          }
+        },
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 10
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.1671305372169002,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1658504647533231,
+            "drawLogLoss": 0.5155631730214536,
+            "winnerBrier": 0.23893982013186396,
+            "winnerLogLoss": 0.6703502545095801,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.9364043885427,
+            "maxOmittedTail": 1.886268918838141e-13
+          }
+        },
+        {
+          "spec": {
+            "family": "shared-gamma",
+            "shape": 5
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.17594032077008773,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1652130580079313,
+            "drawLogLoss": 0.5133096533292145,
+            "winnerBrier": 0.23895016506062947,
+            "winnerLogLoss": 0.6703794925288937,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 4.016186854598243,
+            "maxOmittedTail": 7.630969189875714e-10
+          }
+        }
+      ]
+    },
+    {
+      "name": "draw-logit-intercept",
+      "models": [
+        {
+          "spec": {
+            "family": "draw-logit",
+            "coefficients": [
+              0.3202413615129365
+            ],
+            "ridge": 5
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.2073170731707319,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.16424661058246046,
+            "drawLogLoss": 0.5101212495791836,
+            "winnerBrier": 0.23894720453432658,
+            "winnerLogLoss": 0.6703795931331089,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.8680316587725287,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        }
+      ]
+    },
+    {
+      "name": "draw-logit-inputs",
+      "models": [
+        {
+          "spec": {
+            "family": "draw-logit",
+            "coefficients": [
+              0.34627278332792005,
+              0.05810123623779892,
+              -0.06788182607805854
+            ],
+            "ridge": 5
+          },
+          "training": {
+            "games": 1312,
+            "predictedTieRate": 0.20731707317073167,
+            "observedTieRate": 0.2073170731707317,
+            "drawBrier": 0.1642069946789195,
+            "drawLogLoss": 0.5099720243547743,
+            "winnerBrier": 0.23894881427361186,
+            "winnerLogLoss": 0.6703862164469654,
+            "winnerAccuracy": 0.5807926829268293,
+            "regulationScoreLogLoss": 3.867882433548121,
+            "maxOmittedTail": 2.886579864025407e-15
+          }
+        }
+      ]
+    }
+  ],
+  "diagnosis": {
+    "2023": {
+      "moments": {
+        "games": 1312,
+        "meanA": 3.1150914634146343,
+        "meanB": 2.9032012195121952,
+        "varianceA": 3.1133647513534735,
+        "varianceB": 3.073002711577457,
+        "covariance": -0.3626112769994978,
+        "correlation": -0.11723163781873995
+      },
+      "residualMoments": {
+        "games": 1312,
+        "meanA": -0.08844344631815708,
+        "meanB": -0.076083413265342,
+        "varianceA": 3.05514291871512,
+        "varianceB": 2.987557162072405,
+        "covariance": -0.24427055687149327,
+        "correlation": -0.08085320596584403
+      },
+      "predictedInputTotal": 6.182819542510331,
+      "observedRegulationTotal": 6.0182926829268295,
+      "previousTieRate": 0.1596050217201308,
+      "equalizedRateDiagnostic": 0.16444858265905274,
+      "neutralHomeDiagnostic": 0.16022380721701945,
+      "drawAUC": {
+        "previous": 0.529408229638009,
+        "selected": 0.529408229638009
+      },
+      "byDifferential": [
+        {
+          "lower": 0,
+          "upper": 0.25,
+          "games": 426,
+          "predictedTieRate": 0.21350774625111646,
+          "observedTieRate": 0.20422535211267606,
+          "correlation": -0.06574670164305624
+        },
+        {
+          "lower": 0.25,
+          "upper": 0.5,
+          "games": 333,
+          "predictedTieRate": 0.21087403679280256,
+          "observedTieRate": 0.2222222222222222,
+          "correlation": -0.15621132390945444
+        },
+        {
+          "lower": 0.5,
+          "upper": 1,
+          "games": 379,
+          "predictedTieRate": 0.20600931501697897,
+          "observedTieRate": 0.20844327176781002,
+          "correlation": -0.11897423847565247
+        },
+        {
+          "lower": 1,
+          "upper": null,
+          "games": 174,
+          "predictedTieRate": 0.18820181295164407,
+          "observedTieRate": 0.1839080459770115,
+          "correlation": -0.1295537618774476
+        }
+      ],
+      "byTotal": [
+        {
+          "lower": 0,
+          "upper": 5.5,
+          "games": 97,
+          "predictedTieRate": 0.22482011372164765,
+          "observedTieRate": 0.1958762886597938,
+          "correlation": -0.08232905693714422
+        },
+        {
+          "lower": 5.5,
+          "upper": 6,
+          "games": 344,
+          "predictedTieRate": 0.21418066599769114,
+          "observedTieRate": 0.2441860465116279,
+          "correlation": -0.05035430338402835
+        },
+        {
+          "lower": 6,
+          "upper": 6.5,
+          "games": 565,
+          "predictedTieRate": 0.20551123070699442,
+          "observedTieRate": 0.19823008849557522,
+          "correlation": -0.12504119728067842
+        },
+        {
+          "lower": 6.5,
+          "upper": 7,
+          "games": 252,
+          "predictedTieRate": 0.1986968798173335,
+          "observedTieRate": 0.17857142857142858,
+          "correlation": -0.2005721344706836
+        },
+        {
+          "lower": 7,
+          "upper": null,
+          "games": 54,
+          "predictedTieRate": 0.19127482967360324,
+          "observedTieRate": 0.2222222222222222,
+          "correlation": -0.10092040559177384
+        }
+      ],
+      "byFavorite": [
+        {
+          "lower": 0.5,
+          "upper": 0.55,
+          "games": 515,
+          "predictedTieRate": 0.21288448113240566,
+          "observedTieRate": 0.20388349514563106,
+          "correlation": -0.08159056388108706
+        },
+        {
+          "lower": 0.55,
+          "upper": 0.6,
+          "games": 370,
+          "predictedTieRate": 0.21008269059999912,
+          "observedTieRate": 0.23243243243243245,
+          "correlation": -0.15749123607403054
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.65,
+          "games": 226,
+          "predictedTieRate": 0.20547510199688354,
+          "observedTieRate": 0.18141592920353983,
+          "correlation": -0.1030941450950163
+        },
+        {
+          "lower": 0.65,
+          "upper": 0.7,
+          "games": 125,
+          "predictedTieRate": 0.1960015178020822,
+          "observedTieRate": 0.192,
+          "correlation": -0.17804942252878192
+        },
+        {
+          "lower": 0.7,
+          "upper": 1.00001,
+          "games": 76,
+          "predictedTieRate": 0.18021491997704486,
+          "observedTieRate": 0.21052631578947367,
+          "correlation": 0.011986144458276069
+        }
+      ],
+      "byActualShotsExploratory": [
+        {
+          "lower": 0,
+          "upper": 45,
+          "games": 39,
+          "predictedTieRate": 0.2083820634031946,
+          "observedTieRate": 0.07692307692307693,
+          "correlation": -0.3389397274380489
+        },
+        {
+          "lower": 45,
+          "upper": 55,
+          "games": 273,
+          "predictedTieRate": 0.20783296404383936,
+          "observedTieRate": 0.12087912087912088,
+          "correlation": -0.14668829483349938
+        },
+        {
+          "lower": 55,
+          "upper": 65,
+          "games": 572,
+          "predictedTieRate": 0.20690073394012448,
+          "observedTieRate": 0.20804195804195805,
+          "correlation": -0.1837626422750432
+        },
+        {
+          "lower": 65,
+          "upper": null,
+          "games": 428,
+          "predictedTieRate": 0.2074473844148507,
+          "observedTieRate": 0.2733644859813084,
+          "correlation": -0.03537941115796425
+        }
+      ],
+      "byActualXgExploratory": [
+        {
+          "lower": 0,
+          "upper": 5,
+          "games": 218,
+          "predictedTieRate": 0.2100053330182521,
+          "observedTieRate": 0.19724770642201836,
+          "correlation": -0.20826835977637134
+        },
+        {
+          "lower": 5,
+          "upper": 6,
+          "games": 394,
+          "predictedTieRate": 0.2069193257354626,
+          "observedTieRate": 0.24111675126903553,
+          "correlation": -0.15366900594057836
+        },
+        {
+          "lower": 6,
+          "upper": 7,
+          "games": 359,
+          "predictedTieRate": 0.20632845334447175,
+          "observedTieRate": 0.1977715877437326,
+          "correlation": -0.190922933422555
+        },
+        {
+          "lower": 7,
+          "upper": null,
+          "games": 341,
+          "predictedTieRate": 0.20709885135361697,
+          "observedTieRate": 0.18475073313782991,
+          "correlation": -0.09563712677824932
+        }
+      ],
+      "byVenue": {
+        "homeFavored": {
+          "games": 853,
+          "predictedTieRate": 0.20611412576766142,
+          "observedTieRate": 0.2063305978898007
+        },
+        "awayFavored": {
+          "games": 451,
+          "predictedTieRate": 0.2095718622095773,
+          "observedTieRate": 0.2039911308203991
+        },
+        "neutral": {
+          "games": 8,
+          "predictedTieRate": 0.2084676079581574,
+          "observedTieRate": 0.5
+        }
+      },
+      "diagonal": [
+        {
+          "score": "0-0",
+          "actualRate": 0.0022865853658536584,
+          "previousRate": 0.002303554329681591,
+          "selectedRate": 0.0029893821692582173
+        },
+        {
+          "score": "1-1",
+          "actualRate": 0.028201219512195123,
+          "previousRate": 0.02038560024206646,
+          "selectedRate": 0.026464138377257418
+        },
+        {
+          "score": "2-2",
+          "actualRate": 0.06402439024390244,
+          "previousRate": 0.04620796726720512,
+          "selectedRate": 0.06000629179135238
+        },
+        {
+          "score": "3-3",
+          "actualRate": 0.06935975609756098,
+          "previousRate": 0.04765871360917113,
+          "selectedRate": 0.061910187909896795
+        },
+        {
+          "score": "4-4",
+          "actualRate": 0.03125,
+          "previousRate": 0.028288296212499113,
+          "selectedRate": 0.03675877859920064
+        },
+        {
+          "score": "5-5",
+          "actualRate": 0.009908536585365854,
+          "previousRate": 0.010987998490149867,
+          "selectedRate": 0.014282451427749714
+        }
+      ],
+      "extraTimeIncludedInHistoricalAllSituation": 272
+    },
+    "2024": {
+      "moments": {
+        "games": 1312,
+        "meanA": 3.089176829268293,
+        "meanB": 2.785060975609756,
+        "varianceA": 3.127815645290303,
+        "varianceB": 2.9072366095514384,
+        "covariance": -0.2699100946959124,
+        "correlation": -0.08950728094214147
+      },
+      "residualMoments": {
+        "games": 1312,
+        "meanA": -0.05044500791577778,
+        "meanB": -0.12143118326912448,
+        "varianceA": 3.1349723161228575,
+        "varianceB": 2.8383685663983433,
+        "covariance": -0.1757273118986842,
+        "correlation": -0.05890986348940009
+      },
+      "predictedInputTotal": 6.046113996062948,
+      "observedRegulationTotal": 5.874237804878049,
+      "previousTieRate": 0.16034221778130991,
+      "equalizedRateDiagnostic": 0.16632104512952323,
+      "neutralHomeDiagnostic": 0.16102215025288932,
+      "drawAUC": {
+        "previous": 0.492423195125323,
+        "selected": 0.492423195125323
+      },
+      "byDifferential": [
+        {
+          "lower": 0,
+          "upper": 0.25,
+          "games": 370,
+          "predictedTieRate": 0.21674304158265573,
+          "observedTieRate": 0.1945945945945946,
+          "correlation": -0.08900024649238576
+        },
+        {
+          "lower": 0.25,
+          "upper": 0.5,
+          "games": 287,
+          "predictedTieRate": 0.21384877508353786,
+          "observedTieRate": 0.21951219512195122,
+          "correlation": -0.05145952035040346
+        },
+        {
+          "lower": 0.5,
+          "upper": 1,
+          "games": 431,
+          "predictedTieRate": 0.20781701261113794,
+          "observedTieRate": 0.2088167053364269,
+          "correlation": -0.11595796661117669
+        },
+        {
+          "lower": 1,
+          "upper": null,
+          "games": 224,
+          "predictedTieRate": 0.187661543032174,
+          "observedTieRate": 0.20535714285714285,
+          "correlation": -0.03838120001373656
+        }
+      ],
+      "byTotal": [
+        {
+          "lower": 0,
+          "upper": 5.5,
+          "games": 130,
+          "predictedTieRate": 0.2240312366470012,
+          "observedTieRate": 0.16923076923076924,
+          "correlation": -0.09399583156532858
+        },
+        {
+          "lower": 5.5,
+          "upper": 6,
+          "games": 488,
+          "predictedTieRate": 0.21371818020167122,
+          "observedTieRate": 0.22336065573770492,
+          "correlation": -0.0428135711974251
+        },
+        {
+          "lower": 6,
+          "upper": 6.5,
+          "games": 509,
+          "predictedTieRate": 0.20428255647760327,
+          "observedTieRate": 0.19842829076620824,
+          "correlation": -0.0817867132328684
+        },
+        {
+          "lower": 6.5,
+          "upper": 7,
+          "games": 169,
+          "predictedTieRate": 0.19385485547316472,
+          "observedTieRate": 0.21301775147928995,
+          "correlation": -0.23137752672302112
+        },
+        {
+          "lower": 7,
+          "upper": null,
+          "games": 16,
+          "predictedTieRate": 0.18843858653593237,
+          "observedTieRate": 0.1875,
+          "correlation": -0.49468784930042503
+        }
+      ],
+      "byFavorite": [
+        {
+          "lower": 0.5,
+          "upper": 0.55,
+          "games": 436,
+          "predictedTieRate": 0.21614025638668666,
+          "observedTieRate": 0.19724770642201836,
+          "correlation": -0.07662321998340865
+        },
+        {
+          "lower": 0.55,
+          "upper": 0.6,
+          "games": 332,
+          "predictedTieRate": 0.21278885866833025,
+          "observedTieRate": 0.21084337349397592,
+          "correlation": -0.1389118221428193
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.65,
+          "games": 269,
+          "predictedTieRate": 0.20768326819018218,
+          "observedTieRate": 0.21933085501858737,
+          "correlation": -0.09648007755399944
+        },
+        {
+          "lower": 0.65,
+          "upper": 0.7,
+          "games": 173,
+          "predictedTieRate": 0.1970770824971975,
+          "observedTieRate": 0.2138728323699422,
+          "correlation": 0.006784996836137091
+        },
+        {
+          "lower": 0.7,
+          "upper": 1.00001,
+          "games": 102,
+          "predictedTieRate": 0.1797123003089232,
+          "observedTieRate": 0.18627450980392157,
+          "correlation": -0.00918721707425717
+        }
+      ],
+      "byActualShotsExploratory": [
+        {
+          "lower": 0,
+          "upper": 45,
+          "games": 85,
+          "predictedTieRate": 0.20992254801474033,
+          "observedTieRate": 0.10588235294117647,
+          "correlation": -0.2525231210292912
+        },
+        {
+          "lower": 45,
+          "upper": 55,
+          "games": 447,
+          "predictedTieRate": 0.20871001719853668,
+          "observedTieRate": 0.174496644295302,
+          "correlation": -0.1276207648723133
+        },
+        {
+          "lower": 55,
+          "upper": 65,
+          "games": 565,
+          "predictedTieRate": 0.2086521671385033,
+          "observedTieRate": 0.2176991150442478,
+          "correlation": -0.12258034290999732
+        },
+        {
+          "lower": 65,
+          "upper": null,
+          "games": 215,
+          "predictedTieRate": 0.20534685212517306,
+          "observedTieRate": 0.2837209302325581,
+          "correlation": 0.010529162020400452
+        }
+      ],
+      "byActualXgExploratory": [
+        {
+          "lower": 0,
+          "upper": 5,
+          "games": 263,
+          "predictedTieRate": 0.20963817963675901,
+          "observedTieRate": 0.21292775665399238,
+          "correlation": -0.23294124646103614
+        },
+        {
+          "lower": 5,
+          "upper": 6,
+          "games": 363,
+          "predictedTieRate": 0.20839683083127045,
+          "observedTieRate": 0.24793388429752067,
+          "correlation": -0.1074764516954417
+        },
+        {
+          "lower": 6,
+          "upper": 7,
+          "games": 338,
+          "predictedTieRate": 0.2075546471951347,
+          "observedTieRate": 0.19822485207100593,
+          "correlation": -0.12684674407865065
+        },
+        {
+          "lower": 7,
+          "upper": null,
+          "games": 348,
+          "predictedTieRate": 0.20758184000284738,
+          "observedTieRate": 0.16666666666666666,
+          "correlation": -0.04032983393419195
+        }
+      ],
+      "byVenue": {
+        "homeFavored": {
+          "games": 824,
+          "predictedTieRate": 0.20677385398787454,
+          "observedTieRate": 0.2196601941747573
+        },
+        "awayFavored": {
+          "games": 482,
+          "predictedTieRate": 0.21062719672490637,
+          "observedTieRate": 0.18672199170124482
+        },
+        "neutral": {
+          "games": 6,
+          "predictedTieRate": 0.21181290029197605,
+          "observedTieRate": 0
+        }
+      },
+      "diagonal": [
+        {
+          "score": "0-0",
+          "actualRate": 0.005335365853658537,
+          "previousRate": 0.002578927990140832,
+          "selectedRate": 0.003346106275904373
+        },
+        {
+          "score": "1-1",
+          "actualRate": 0.02972560975609756,
+          "previousRate": 0.022083472355418233,
+          "selectedRate": 0.02866155879914512
+        },
+        {
+          "score": "2-2",
+          "actualRate": 0.0663109756097561,
+          "previousRate": 0.04815760783963033,
+          "selectedRate": 0.0625214725768218
+        },
+        {
+          "score": "3-3",
+          "actualRate": 0.06173780487804878,
+          "previousRate": 0.047543755715689535,
+          "selectedRate": 0.06174313792042656
+        },
+        {
+          "score": "4-4",
+          "actualRate": 0.03125,
+          "previousRate": 0.0268912501771968,
+          "selectedRate": 0.034932968217379484
+        },
+        {
+          "score": "5-5",
+          "actualRate": 0.008384146341463415,
+          "previousRate": 0.009912981138765172,
+          "selectedRate": 0.01288118690196006
+        }
+      ],
+      "extraTimeIncludedInHistoricalAllSituation": 271
+    }
+  },
+  "holdout": {
+    "selected": {
+      "winner": {
+        "games": 1312,
+        "accuracy": 0.5403963414634146,
+        "brier": 0.2468667404843764,
+        "logLoss": 0.6867581167354901,
+        "calibration": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 3,
+            "meanProbability": 0.24916081635621443,
+            "observedRate": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 68,
+            "meanProbability": 0.3645441488970111,
+            "observedRate": 0.4264705882352941
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 383,
+            "meanProbability": 0.4589434136709683,
+            "observedRate": 0.4856396866840731
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 553,
+            "meanProbability": 0.5494426104122804,
+            "observedRate": 0.5135623869801085
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 268,
+            "meanProbability": 0.637968566514833,
+            "observedRate": 0.5932835820895522
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 37,
+            "meanProbability": 0.7298676521687611,
+            "observedRate": 0.7297297297297297
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          }
+        ]
+      },
+      "draw": {
+        "games": 1312,
+        "accuracy": 0.7515243902439024,
+        "brier": 0.18801585889883318,
+        "logLoss": 0.5643865715324995,
+        "calibration": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 200,
+            "meanProbability": 0.19096972855116692,
+            "observedRate": 0.22
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 1112,
+            "meanProbability": 0.21360793811199785,
+            "observedRate": 0.25359712230215825
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          }
+        ]
+      },
+      "predictedTieRate": 0.2101569915326028,
+      "observedTieRate": 0.24847560975609756,
+      "regulationScoreLogLoss": 3.8166072562642555
+    },
+    "previous": {
+      "winner": {
+        "games": 1312,
+        "accuracy": 0.5403963414634146,
+        "brier": 0.24709647097827028,
+        "logLoss": 0.6872434870155673,
+        "calibration": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 6,
+            "meanProbability": 0.27028668004915885,
+            "observedRate": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 74,
+            "meanProbability": 0.3666275485968063,
+            "observedRate": 0.44594594594594594
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 374,
+            "meanProbability": 0.4587400809948208,
+            "observedRate": 0.48663101604278075
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 532,
+            "meanProbability": 0.5494108833401322,
+            "observedRate": 0.5150375939849624
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 281,
+            "meanProbability": 0.6383492277652251,
+            "observedRate": 0.5871886120996441
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 45,
+            "meanProbability": 0.7310466914792096,
+            "observedRate": 0.6888888888888889
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          }
+        ]
+      },
+      "draw": {
+        "games": 1312,
+        "accuracy": 0.7515243902439024,
+        "brier": 0.19405500082192434,
+        "logLoss": 0.5846402760213786,
+        "calibration": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1312,
+            "meanProbability": 0.16192063277534663,
+            "observedRate": 0.24847560975609756
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "n": 0,
+            "meanProbability": null,
+            "observedRate": null
+          }
+        ]
+      },
+      "predictedTieRate": 0.16192063277534663,
+      "observedTieRate": 0.24847560975609756,
+      "regulationScoreLogLoss": 3.8368609607531377
+    },
+    "evaluatedAt": "2026-10-07T02:15:32.850Z",
+    "decisionFrozenAt": "2026-10-07T02:14:41.557Z"
+  },
+  "simulation": {
+    "modelVersion": "1.1.0-experimental",
+    "directedMatchupsChecked": 992,
+    "scenarios": [
+      {
+        "name": "even",
+        "a": "DET",
+        "b": "EDM",
+        "scenario": {
+          "homeA": true
+        },
+        "goalRateInputs": {
+          "a": 3.2249582867758027,
+          "b": 3.2252574331894133
+        },
+        "regulationMeans": {
+          "a": 3.2100180786225248,
+          "b": 3.210300142349423
+        },
+        "variances": {
+          "a": 3.136992767477624,
+          "b": 3.1372832642044823
+        },
+        "covariance": 0.09619919140333621,
+        "omittedTail": 2.220446049250313e-16,
+        "probabilities": {
+          "regulationA": 0.39576076334820864,
+          "regulationB": 0.39584760375174805,
+          "overtime": 0.20839163290004326,
+          "fullGameA": 0.4999532042482704,
+          "fullGameB": 0.5000467957517296,
+          "overtimeConditionalA": 0.49998380189303715,
+          "regulationMeanA": 3.2100180786225248,
+          "regulationMeanB": 3.210300142349423
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.002052340433192445
+          },
+          {
+            "score": "1-1",
+            "probability": 0.021347051002785514
+          },
+          {
+            "score": "2-2",
+            "probability": 0.05550938079589009
+          },
+          {
+            "score": "3-3",
+            "probability": 0.06415231897195986
+          },
+          {
+            "score": "4-4",
+            "probability": 0.04170430264921901
+          }
+        ],
+        "highScoreTail": 0.0035114064043295216,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4999532042482704,
+                "sampled": 0.5077,
+                "error": 0.0077467957517296515,
+                "standardError": 0.004999999978101576,
+                "z": 1.549359157131635
+              },
+              "overtime": {
+                "analytical": 0.20839163290004326,
+                "sampled": 0.2153,
+                "error": 0.006908367099956736,
+                "standardError": 0.004061582945568105,
+                "z": 1.700905088616981
+              },
+              "regulationA": {
+                "analytical": 0.39576076334820864,
+                "sampled": 0.4021,
+                "error": 0.006339236651791369,
+                "standardError": 0.004890134778738228,
+                "z": 1.296331683812413
+              }
+            },
+            "sampledFinalMeanA": 3.3264,
+            "analyticalFinalMeanA": 3.3142105195225864,
+            "sampledFinalMeanB": 3.2811,
+            "analyticalFinalMeanB": 3.3144993343494047
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4999532042482704,
+                "sampled": 0.49975,
+                "error": -0.0002032042482703611,
+                "standardError": 0.0015811388231593,
+                "z": -0.1285176515142012
+              },
+              "overtime": {
+                "analytical": 0.20839163290004326,
+                "sampled": 0.20699,
+                "error": -0.0014016329000432481,
+                "standardError": 0.0012843853013690901,
+                "z": -1.091286935897801
+              },
+              "regulationA": {
+                "analytical": 0.39576076334820864,
+                "sampled": 0.3969,
+                "error": 0.001139236651791331,
+                "standardError": 0.0015463963966016341,
+                "z": 0.7367041557358264
+              }
+            },
+            "sampledFinalMeanA": 3.31052,
+            "analyticalFinalMeanA": 3.3142105195225864,
+            "sampledFinalMeanB": 3.3193,
+            "analyticalFinalMeanB": 3.3144993343494047
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4999532042482704,
+                "sampled": 0.499981,
+                "error": 0.000027795751729620122,
+                "standardError": 0.0004999999978101576,
+                "z": 0.055591503702713506
+              },
+              "overtime": {
+                "analytical": 0.20839163290004326,
+                "sampled": 0.207903,
+                "error": -0.000488632900043251,
+                "standardError": 0.0004061582945568105,
+                "z": -1.2030602516106057
+              },
+              "regulationA": {
+                "analytical": 0.39576076334820864,
+                "sampled": 0.395795,
+                "error": 0.000034236651791363926,
+                "standardError": 0.0004890134778738228,
+                "z": 0.0700116731755966
+              }
+            },
+            "sampledFinalMeanA": 3.310962,
+            "analyticalFinalMeanA": 3.3142105195225864,
+            "sampledFinalMeanB": 3.312688,
+            "analyticalFinalMeanB": 3.3144993343494047
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 3.21122,
+          "meanB": 3.210084,
+          "varianceA": 3.1354641115999993,
+          "varianceB": 3.1420607129439997,
+          "covariance": 0.09285905752000012,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.00206,
+              "analytical": 0.002052340433192445
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.021326,
+              "analytical": 0.021347051002785514
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.055285,
+              "analytical": 0.05550938079589009
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.064086,
+              "analytical": 0.06415231897195986
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.041408,
+              "analytical": 0.04170430264921901
+            }
+          ]
+        }
+      },
+      {
+        "name": "favorite",
+        "a": "COL",
+        "b": "VAN",
+        "scenario": {
+          "homeA": true
+        },
+        "goalRateInputs": {
+          "a": 4.550865002886039,
+          "b": 2.3068932328440095
+        },
+        "regulationMeans": {
+          "a": 4.488326120951299,
+          "b": 2.3336003695415015
+        },
+        "variances": {
+          "a": 4.529024811236194,
+          "b": 2.2970914756457352
+        },
+        "covariance": 0.024400184269708802,
+        "omittedTail": 6.661338147750939e-16,
+        "probabilities": {
+          "regulationA": 0.7182464353477727,
+          "regulationB": 0.13661615634448374,
+          "overtime": 0.1451374083077435,
+          "fullGameA": 0.8074021944598047,
+          "fullGameB": 0.19259780554019534,
+          "overtimeConditionalA": 0.6142851808610892,
+          "regulationMeanA": 4.488326120951299,
+          "regulationMeanB": 2.3336003695415015
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.0013904875642822407
+          },
+          {
+            "score": "1-1",
+            "probability": 0.01459783857865624
+          },
+          {
+            "score": "2-2",
+            "probability": 0.03831333998274617
+          },
+          {
+            "score": "3-3",
+            "probability": 0.04469191373698771
+          },
+          {
+            "score": "4-4",
+            "probability": 0.029324486571394776
+          }
+        ],
+        "highScoreTail": 0.01771284931080338,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.8074021944598047,
+                "sampled": 0.8091,
+                "error": 0.001697805540195385,
+                "standardError": 0.003943398164544083,
+                "z": 0.43054377705520824
+              },
+              "overtime": {
+                "analytical": 0.1451374083077435,
+                "sampled": 0.1447,
+                "error": -0.0004374083077434976,
+                "standardError": 0.003522393234967596,
+                "z": -0.12417929474802704
+              },
+              "regulationA": {
+                "analytical": 0.7182464353477727,
+                "sampled": 0.72,
+                "error": 0.001753564652227313,
+                "standardError": 0.0044985385788941555,
+                "z": 0.38980762784930467
+              }
+            },
+            "sampledFinalMeanA": 4.5918,
+            "analyticalFinalMeanA": 4.57748188006333,
+            "sampledFinalMeanB": 2.3862,
+            "analyticalFinalMeanB": 2.389582018737213
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.8074021944598047,
+                "sampled": 0.8074,
+                "error": -0.0000021944598046497177,
+                "standardError": 0.0012470119920886746,
+                "z": -0.0017597744196301765
+              },
+              "overtime": {
+                "analytical": 0.1451374083077435,
+                "sampled": 0.1444,
+                "error": -0.0007374083077434923,
+                "standardError": 0.0011138785437266258,
+                "z": -0.662018594304184
+              },
+              "regulationA": {
+                "analytical": 0.7182464353477727,
+                "sampled": 0.71914,
+                "error": 0.000893564652227341,
+                "standardError": 0.0014225628051442597,
+                "z": 0.6281372245893397
+              }
+            },
+            "sampledFinalMeanA": 4.59244,
+            "analyticalFinalMeanA": 4.57748188006333,
+            "sampledFinalMeanB": 2.39233,
+            "analyticalFinalMeanB": 2.389582018737213
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.8074021944598047,
+                "sampled": 0.807663,
+                "error": 0.0002608055401953635,
+                "standardError": 0.0003943398164544083,
+                "z": 0.661372575917696
+              },
+              "overtime": {
+                "analytical": 0.1451374083077435,
+                "sampled": 0.144727,
+                "error": -0.00041040830774349835,
+                "standardError": 0.00035223932349675956,
+                "z": -1.1651405177289182
+              },
+              "regulationA": {
+                "analytical": 0.7182464353477727,
+                "sampled": 0.718928,
+                "error": 0.0006815646522273511,
+                "standardError": 0.00044985385788941554,
+                "z": 1.5150801538638696
+              }
+            },
+            "sampledFinalMeanA": 4.577366,
+            "analyticalFinalMeanA": 4.57748188006333,
+            "sampledFinalMeanB": 2.38757,
+            "analyticalFinalMeanB": 2.389582018737213
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 4.488593,
+          "meanB": 2.335246,
+          "varianceA": 4.5288678803510045,
+          "varianceB": 2.294940119483999,
+          "covariance": 0.021306151122001182,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.001463,
+              "analytical": 0.0013904875642822407
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.014537,
+              "analytical": 0.01459783857865624
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.038231,
+              "analytical": 0.03831333998274617
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.044811,
+              "analytical": 0.04469191373698771
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.029595,
+              "analytical": 0.029324486571394776
+            }
+          ]
+        }
+      },
+      {
+        "name": "high-total",
+        "a": "PIT",
+        "b": "VAN",
+        "scenario": {
+          "homeA": true
+        },
+        "goalRateInputs": {
+          "a": 4.229361633826641,
+          "b": 2.7665214097237687
+        },
+        "regulationMeans": {
+          "a": 4.178120012710331,
+          "b": 2.78535477254879
+        },
+        "variances": {
+          "a": 4.16120147762269,
+          "b": 2.723299141818732
+        },
+        "covariance": 0.06307299176136638,
+        "omittedTail": 2.220446049250313e-15,
+        "probabilities": {
+          "regulationA": 0.6100353704142633,
+          "regulationB": 0.21515151318428608,
+          "overtime": 0.17481311640145072,
+          "fullGameA": 0.7102087584451532,
+          "fullGameB": 0.2897912415548468,
+          "overtimeConditionalA": 0.573031303903113,
+          "regulationMeanA": 4.178120012710331,
+          "regulationMeanB": 2.78535477254879
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.0012008442419232086
+          },
+          {
+            "score": "1-1",
+            "probability": 0.014050621564852228
+          },
+          {
+            "score": "2-2",
+            "probability": 0.04110024420038711
+          },
+          {
+            "score": "3-3",
+            "probability": 0.053433146570447974
+          },
+          {
+            "score": "4-4",
+            "probability": 0.03907505732582846
+          }
+        ],
+        "highScoreTail": 0.011640365517929517,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.7102087584451532,
+                "sampled": 0.7151,
+                "error": 0.00489124155484677,
+                "standardError": 0.004536653809504834,
+                "z": 1.0781606356206932
+              },
+              "overtime": {
+                "analytical": 0.17481311640145072,
+                "sampled": 0.1745,
+                "error": -0.00031311640145073594,
+                "standardError": 0.00379807175729295,
+                "z": -0.08244088618112565
+              },
+              "regulationA": {
+                "analytical": 0.6100353704142633,
+                "sampled": 0.6136,
+                "error": 0.0035646295857367782,
+                "standardError": 0.0048774195765568075,
+                "z": 0.730843334223301
+              }
+            },
+            "sampledFinalMeanA": 4.2838,
+            "analyticalFinalMeanA": 4.278293400741221,
+            "sampledFinalMeanB": 2.8647,
+            "analyticalFinalMeanB": 2.859994500919351
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.7102087584451532,
+                "sampled": 0.7113,
+                "error": 0.0010912415548468557,
+                "standardError": 0.001434615899371491,
+                "z": 0.7606506768291996
+              },
+              "overtime": {
+                "analytical": 0.17481311640145072,
+                "sampled": 0.17362,
+                "error": -0.0011931164014507278,
+                "standardError": 0.0012010557469803954,
+                "z": -0.9933896944004239
+              },
+              "regulationA": {
+                "analytical": 0.6100353704142633,
+                "sampled": 0.61245,
+                "error": 0.002414629585736794,
+                "standardError": 0.001542375496621351,
+                "z": 1.5655264175462837
+              }
+            },
+            "sampledFinalMeanA": 4.28078,
+            "analyticalFinalMeanA": 4.278293400741221,
+            "sampledFinalMeanB": 2.85569,
+            "analyticalFinalMeanB": 2.859994500919351
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.7102087584451532,
+                "sampled": 0.709567,
+                "error": -0.0006417584451532399,
+                "standardError": 0.0004536653809504834,
+                "z": -1.4146074884724043
+              },
+              "overtime": {
+                "analytical": 0.17481311640145072,
+                "sampled": 0.174729,
+                "error": -0.00008411640145072896,
+                "standardError": 0.00037980717572929496,
+                "z": -0.22147133289204196
+              },
+              "regulationA": {
+                "analytical": 0.6100353704142633,
+                "sampled": 0.609638,
+                "error": -0.0003973704142632428,
+                "standardError": 0.00048774195765568075,
+                "z": -0.8147144366525151
+              }
+            },
+            "sampledFinalMeanA": 4.274267,
+            "analyticalFinalMeanA": 4.278293400741221,
+            "sampledFinalMeanB": 2.860443,
+            "analyticalFinalMeanB": 2.859994500919351
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 4.179801,
+          "meanB": 2.785495,
+          "varianceA": 4.170418600399,
+          "varianceB": 2.723986604975001,
+          "covariance": 0.06749221350500001,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.001165,
+              "analytical": 0.0012008442419232086
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.014224,
+              "analytical": 0.014050621564852228
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.040923,
+              "analytical": 0.04110024420038711
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.053297,
+              "analytical": 0.053433146570447974
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.039037,
+              "analytical": 0.03907505732582846
+            }
+          ]
+        }
+      },
+      {
+        "name": "low-total",
+        "a": "STL",
+        "b": "NYR",
+        "scenario": {
+          "homeA": true
+        },
+        "goalRateInputs": {
+          "a": 2.619991453137202,
+          "b": 2.7893520135711807
+        },
+        "regulationMeans": {
+          "a": 2.608709540207622,
+          "b": 2.767542090039593
+        },
+        "variances": {
+          "a": 2.54369719678255,
+          "b": 2.707785807378217
+        },
+        "covariance": 0.08836498213512023,
+        "omittedTail": 0,
+        "probabilities": {
+          "regulationA": 0.36000383623770116,
+          "regulationB": 0.4131445185015519,
+          "overtime": 0.22685164526074683,
+          "fullGameA": 0.4709490153465426,
+          "fullGameB": 0.5290509846534575,
+          "overtimeConditionalA": 0.4890649083956138,
+          "regulationMeanA": 2.608709540207622,
+          "regulationMeanB": 2.767542090039593
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.005780404941994874
+          },
+          {
+            "score": "1-1",
+            "probability": 0.042243652704169084
+          },
+          {
+            "score": "2-2",
+            "probability": 0.07717998183941219
+          },
+          {
+            "score": "3-3",
+            "probability": 0.06267081788012477
+          },
+          {
+            "score": "4-4",
+            "probability": 0.0286252032922083
+          }
+        ],
+        "highScoreTail": 0.0009750301105115974,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4709490153465426,
+                "sampled": 0.4743,
+                "error": 0.0033509846534574006,
+                "standardError": 0.0049915532681788005,
+                "z": 0.6713310413453784
+              },
+              "overtime": {
+                "analytical": 0.22685164526074683,
+                "sampled": 0.2276,
+                "error": 0.0007483547392531653,
+                "standardError": 0.004187958647160202,
+                "z": 0.17869200780208624
+              },
+              "regulationA": {
+                "analytical": 0.36000383623770116,
+                "sampled": 0.3626,
+                "error": 0.00259616376229882,
+                "standardError": 0.004800011188860288,
+                "z": 0.5408661897130392
+              }
+            },
+            "sampledFinalMeanA": 2.7258,
+            "analyticalFinalMeanA": 2.7196547193164635,
+            "sampledFinalMeanB": 2.8714,
+            "analyticalFinalMeanB": 2.883448556191498
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4709490153465426,
+                "sampled": 0.46976,
+                "error": -0.001189015346542588,
+                "standardError": 0.0015784677389502283,
+                "z": -0.753271870689832
+              },
+              "overtime": {
+                "analytical": 0.22685164526074683,
+                "sampled": 0.22865,
+                "error": 0.0017983547392531607,
+                "standardError": 0.0013243488071623696,
+                "z": 1.357916229868795
+              },
+              "regulationA": {
+                "analytical": 0.36000383623770116,
+                "sampled": 0.35764,
+                "error": -0.0023638362377011446,
+                "standardError": 0.0015178968151091153,
+                "z": -1.5573102296358783
+              }
+            },
+            "sampledFinalMeanA": 2.71372,
+            "analyticalFinalMeanA": 2.7196547193164635,
+            "sampledFinalMeanB": 2.88613,
+            "analyticalFinalMeanB": 2.883448556191498
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.4709490153465426,
+                "sampled": 0.470864,
+                "error": -0.00008501534654259402,
+                "standardError": 0.00049915532681788,
+                "z": -0.17031841988858992
+              },
+              "overtime": {
+                "analytical": 0.22685164526074683,
+                "sampled": 0.227432,
+                "error": 0.0005803547392531638,
+                "standardError": 0.0004187958647160202,
+                "z": 1.3857699852091292
+              },
+              "regulationA": {
+                "analytical": 0.36000383623770116,
+                "sampled": 0.359562,
+                "error": -0.0004418362377011653,
+                "standardError": 0.00048000111888602887,
+                "z": -0.9204900162036385
+              }
+            },
+            "sampledFinalMeanA": 2.719655,
+            "analyticalFinalMeanA": 2.7196547193164635,
+            "sampledFinalMeanB": 2.885529,
+            "analyticalFinalMeanB": 2.883448556191498
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 2.611495,
+          "meanB": 2.769493,
+          "varianceA": 2.551366864975,
+          "varianceB": 2.7138915229509992,
+          "covariance": 0.09074087796499963,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.005688,
+              "analytical": 0.005780404941994874
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.042268,
+              "analytical": 0.042243652704169084
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.077067,
+              "analytical": 0.07717998183941219
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.062255,
+              "analytical": 0.06267081788012477
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.029044,
+              "analytical": 0.0286252032922083
+            }
+          ]
+        }
+      },
+      {
+        "name": "strong-goalie",
+        "a": "CAR",
+        "b": "NYR",
+        "scenario": {
+          "homeA": true,
+          "goalieB": {
+            "id": "8482193",
+            "status": "projected",
+            "source": "Hypothetical validation scenario from past observations",
+            "observedAt": "2026-10-05T12:00:00Z"
+          }
+        },
+        "goalRateInputs": {
+          "a": 3.2050358043863416,
+          "b": 2.660578442287128
+        },
+        "regulationMeans": {
+          "a": 3.172924807602295,
+          "b": 2.6603547520955635
+        },
+        "variances": {
+          "a": 3.1199287603889037,
+          "b": 2.590784912584306
+        },
+        "covariance": 0.08614357796201588,
+        "omittedTail": 0,
+        "probabilities": {
+          "regulationA": 0.4751238156829825,
+          "regulationB": 0.31114796634206937,
+          "overtime": 0.21372821797494818,
+          "fullGameA": 0.5889168669338639,
+          "fullGameB": 0.4110831330661361,
+          "overtimeConditionalA": 0.5324194078304599,
+          "regulationMeanA": 3.172924807602295,
+          "regulationMeanB": 2.6603547520955635
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.0036767534803400404
+          },
+          {
+            "score": "1-1",
+            "probability": 0.031352593055834974
+          },
+          {
+            "score": "2-2",
+            "probability": 0.0668378432617871
+          },
+          {
+            "score": "3-3",
+            "probability": 0.06332699370432057
+          },
+          {
+            "score": "4-4",
+            "probability": 0.033750315898207886
+          }
+        ],
+        "highScoreTail": 0.002098878903973179,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.5889168669338639,
+                "sampled": 0.5931,
+                "error": 0.004183133066136047,
+                "standardError": 0.004920302742460727,
+                "z": 0.8501779839758378
+              },
+              "overtime": {
+                "analytical": 0.21372821797494818,
+                "sampled": 0.2138,
+                "error": 0.00007178202505181419,
+                "standardError": 0.0040993714983665625,
+                "z": 0.017510495226016106
+              },
+              "regulationA": {
+                "analytical": 0.4751238156829825,
+                "sampled": 0.477,
+                "error": 0.0018761843170174708,
+                "standardError": 0.004993807920353223,
+                "z": 0.3757021389170219
+              }
+            },
+            "sampledFinalMeanA": 3.2966,
+            "analyticalFinalMeanA": 3.2867178588531765,
+            "sampledFinalMeanB": 2.7495,
+            "analyticalFinalMeanB": 2.7602899188196304
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.5889168669338639,
+                "sampled": 0.58835,
+                "error": -0.0005668669338638743,
+                "standardError": 0.0015559363443748769,
+                "z": -0.3643252732756381
+              },
+              "overtime": {
+                "analytical": 0.21372821797494818,
+                "sampled": 0.21267,
+                "error": -0.001058217974948178,
+                "standardError": 0.0012963350910015557,
+                "z": -0.8163151505299396
+              },
+              "regulationA": {
+                "analytical": 0.4751238156829825,
+                "sampled": 0.47451,
+                "error": -0.0006138156829825214,
+                "standardError": 0.001579180722570491,
+                "z": -0.38869248731924166
+              }
+            },
+            "sampledFinalMeanA": 3.28706,
+            "analyticalFinalMeanA": 3.2867178588531765,
+            "sampledFinalMeanB": 2.76154,
+            "analyticalFinalMeanB": 2.7602899188196304
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.5889168669338639,
+                "sampled": 0.589084,
+                "error": 0.0001671330661361381,
+                "standardError": 0.0004920302742460728,
+                "z": 0.33968045237100997
+              },
+              "overtime": {
+                "analytical": 0.21372821797494818,
+                "sampled": 0.213957,
+                "error": 0.00022878202505183243,
+                "standardError": 0.0004099371498366563,
+                "z": 0.5580904905617678
+              },
+              "regulationA": {
+                "analytical": 0.4751238156829825,
+                "sampled": 0.475374,
+                "error": 0.00025018431701751,
+                "standardError": 0.0004993807920353223,
+                "z": 0.500989066875872
+              }
+            },
+            "sampledFinalMeanA": 3.286714,
+            "analyticalFinalMeanA": 3.2867178588531765,
+            "sampledFinalMeanB": 2.758796,
+            "analyticalFinalMeanB": 2.7602899188196304
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 3.174293,
+          "meanB": 2.657359,
+          "varianceA": 3.1225169501510006,
+          "varianceB": 2.5915081451189996,
+          "covariance": 0.0850389278130006,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.003689,
+              "analytical": 0.0036767534803400404
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.031268,
+              "analytical": 0.031352593055834974
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.066692,
+              "analytical": 0.0668378432617871
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.063354,
+              "analytical": 0.06332699370432057
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.033708,
+              "analytical": 0.033750315898207886
+            }
+          ]
+        }
+      },
+      {
+        "name": "weak-goalie",
+        "a": "CAR",
+        "b": "NYR",
+        "scenario": {
+          "homeA": true,
+          "goalieB": {
+            "id": "8471734",
+            "status": "projected",
+            "source": "Hypothetical validation scenario from past observations",
+            "observedAt": "2026-10-05T12:00:00Z"
+          }
+        },
+        "goalRateInputs": {
+          "a": 3.6399235086204706,
+          "b": 2.660578442287128
+        },
+        "regulationMeans": {
+          "a": 3.5971943198725245,
+          "b": 2.670800390063587
+        },
+        "variances": {
+          "a": 3.5596185552738895,
+          "b": 2.6031101147541893
+        },
+        "covariance": 0.0769140259597112,
+        "omittedTail": 7.771561172376096e-16,
+        "probabilities": {
+          "regulationA": 0.5425111668536012,
+          "regulationB": 0.2601795820535319,
+          "overtime": 0.19730925109286693,
+          "fullGameA": 0.6518775993923528,
+          "fullGameB": 0.3481224006076472,
+          "overtimeConditionalA": 0.5542894310985771,
+          "regulationMeanA": 3.5971943198725245,
+          "regulationMeanB": 2.670800390063587
+        },
+        "diagonal": [
+          {
+            "score": "0-0",
+            "probability": 0.00239147467702371
+          },
+          {
+            "score": "1-1",
+            "probability": 0.02315976304215481
+          },
+          {
+            "score": "2-2",
+            "probability": 0.056071534994915836
+          },
+          {
+            "score": "3-3",
+            "probability": 0.060334853281978934
+          },
+          {
+            "score": "4-4",
+            "probability": 0.03651880883944948
+          }
+        ],
+        "highScoreTail": 0.00452675495775482,
+        "convergence": [
+          {
+            "trials": 10000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.6518775993923528,
+                "sampled": 0.6587,
+                "error": 0.006822400607647161,
+                "standardError": 0.004763750568646683,
+                "z": 1.432148998847627
+              },
+              "overtime": {
+                "analytical": 0.19730925109286693,
+                "sampled": 0.1971,
+                "error": -0.00020925109286693,
+                "standardError": 0.003979677254829076,
+                "z": -0.052579915271525494
+              },
+              "regulationA": {
+                "analytical": 0.5425111668536012,
+                "sampled": 0.5488,
+                "error": 0.00628883314639872,
+                "standardError": 0.0049818952286529,
+                "z": 1.2623374956239728
+              }
+            },
+            "sampledFinalMeanA": 3.7112,
+            "analyticalFinalMeanA": 3.706560752411276,
+            "sampledFinalMeanB": 2.738,
+            "analyticalFinalMeanB": 2.7587432086177026
+          },
+          {
+            "trials": 100000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.6518775993923528,
+                "sampled": 0.64912,
+                "error": -0.002757599392352761,
+                "standardError": 0.0015064302001845822,
+                "z": -1.8305523827223282
+              },
+              "overtime": {
+                "analytical": 0.19730925109286693,
+                "sampled": 0.19881,
+                "error": 0.0015007489071330593,
+                "standardError": 0.001258484447762621,
+                "z": 1.1925049290844592
+              },
+              "regulationA": {
+                "analytical": 0.5425111668536012,
+                "sampled": 0.53985,
+                "error": -0.0026611668536011823,
+                "standardError": 0.0015754135986868504,
+                "z": -1.6891861640773804
+              }
+            },
+            "sampledFinalMeanA": 3.70719,
+            "analyticalFinalMeanA": 3.706560752411276,
+            "sampledFinalMeanB": 2.76935,
+            "analyticalFinalMeanB": 2.7587432086177026
+          },
+          {
+            "trials": 1000000,
+            "errors": {
+              "fullGameA": {
+                "analytical": 0.6518775993923528,
+                "sampled": 0.652401,
+                "error": 0.0005234006076472175,
+                "standardError": 0.0004763750568646683,
+                "z": 1.098715392640527
+              },
+              "overtime": {
+                "analytical": 0.19730925109286693,
+                "sampled": 0.197399,
+                "error": 0.00008974890713306372,
+                "standardError": 0.00039796772548290763,
+                "z": 0.2255180543200063
+              },
+              "regulationA": {
+                "analytical": 0.5425111668536012,
+                "sampled": 0.542941,
+                "error": 0.00042983314639877257,
+                "standardError": 0.0004981895228652899,
+                "z": 0.862790417443201
+              }
+            },
+            "sampledFinalMeanA": 3.707681,
+            "analyticalFinalMeanA": 3.706560752411276,
+            "sampledFinalMeanB": 2.75693,
+            "analyticalFinalMeanB": 2.7587432086177026
+          }
+        ],
+        "regulationSample": {
+          "trials": 1000000,
+          "meanA": 3.600123,
+          "meanB": 2.66843,
+          "varianceA": 3.5629173848710014,
+          "varianceB": 2.6036473351000007,
+          "covariance": 0.07882878310999963,
+          "diagonal": [
+            {
+              "score": "0-0",
+              "sampled": 0.002459,
+              "analytical": 0.00239147467702371
+            },
+            {
+              "score": "1-1",
+              "sampled": 0.023052,
+              "analytical": 0.02315976304215481
+            },
+            {
+              "score": "2-2",
+              "sampled": 0.05548,
+              "analytical": 0.056071534994915836
+            },
+            {
+              "score": "3-3",
+              "sampled": 0.060031,
+              "analytical": 0.060334853281978934
+            },
+            {
+              "score": "4-4",
+              "sampled": 0.036364,
+              "analytical": 0.03651880883944948
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Residual holdout tie underprediction of 3.8 percentage points; no holdout tuning.",
+    "Constant odds calibration improves probability quality but preserves previous game ranking/AUC.",
+    "Retrospective MoneyPuck revisions and assumed next-day-noon availability remain.",
+    "Historical all-situation exposure includes extra time; frozen strength inputs retain this limitation.",
+    "Shared scoring/correlation diagnostics are descriptive; actual-game shot/xG bins are never pregame features."
+  ]
+}
